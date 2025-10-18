@@ -3,16 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PenaltyDz - Organisez vos matchs de football</title>
-  <meta name="description" content="PenaltyDz est une application gratuite qui vous permet d’organiser facilement des matchs de football amateurs en Algérie.">
-  <meta name="keywords" content="PenaltyDz, football, matchs, Algérie, amateur, équipe, sport">
+  <title>PenaltyDz - Organisez vos matchs de football en Algérie</title>
+  <meta name="description" content="PenaltyDz est une application gratuite qui vous permet d'organiser facilement des matchs de football amateurs en Algérie. Trouvez des équipes adverses, recrutez des joueurs.">
+  <meta name="keywords" content="PenaltyDz, football, matchs, Algérie, amateur, équipe, sport, organisation matchs, application football">
   <meta name="author" content="PenaltyDz">
   <meta property="og:title" content="PenaltyDz - Organisez vos matchs de football">
-  <meta property="og:description" content="PenaltyDz est une application gratuite qui vous permet d’organiser facilement des matchs de football amateurs en Algérie.">
+  <meta property="og:description" content="PenaltyDz est une application gratuite qui vous permet d'organiser facilement des matchs de football amateurs en Algérie.">
   <meta property="og:image" content="https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/penalty-d-z-2pwo9a/assets/r1oyq8g05psy/PenaltyDZ.jpeg">
   <meta property="og:url" content="https://penaltydz.com">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/penalty-d-z-2pwo9a/assets/r1oyq8g05psy/PenaltyDZ.jpeg">
+  
+  <!-- Schema.org markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "PenaltyDz",
+    "applicationCategory": "SportsApplication",
+    "operatingSystem": "Android",
+    "description": "Application pour organiser des matchs de football amateurs en Algérie",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "DZD"
+    }
+  }
+  </script>
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -83,6 +101,136 @@
       transform: scale(1.3);
       box-shadow: 0 0 15px rgba(214, 149, 91, 0.6);
     }
+    
+    /* Améliorations d'accessibilité */
+    .download-btn {
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .download-btn:focus {
+      outline: 2px solid white;
+      outline-offset: 2px;
+    }
+    
+    /* Indicateur de chargement */
+    .loading-spinner {
+      display: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+      margin-right: 10px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    /* Amélioration du contraste pour l'accessibilité */
+    .text-primary-medium {
+      color: #226d68;
+    }
+    
+    /* Animation de pulse pour attirer l'attention */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    .pulse-animation {
+      animation: pulse 2s infinite;
+    }
+    
+    /* Style pour le screenshot de l'application */
+    .app-screenshot {
+      border-radius: 24px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+      transition: transform 0.5s ease;
+    }
+    .app-screenshot:hover {
+      transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+    }
+    
+    /* Styles pour le carrousel */
+    .carousel-container {
+      position: relative;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    
+    .carousel-slide {
+      display: none;
+      transition: opacity 0.5s ease;
+    }
+    
+    .carousel-slide.active {
+      display: block;
+      opacity: 1;
+    }
+    
+    .carousel-slide img {
+      border-radius: 20px;
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.8);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+    
+    .carousel-btn:hover {
+      background: white;
+      transform: translateY(-50%) scale(1.1);
+    }
+    
+    .carousel-btn.prev {
+      left: -20px;
+    }
+    
+    .carousel-btn.next {
+      right: -20px;
+    }
+    
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 8px;
+    }
+    
+    .carousel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #cbd5e0;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .carousel-dot.active {
+      background: #226d68;
+      transform: scale(1.2);
+    }
   </style>
 </head>
 
@@ -93,19 +241,25 @@
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center py-4">
         <div class="flex items-center">
-          <img src="https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/penalty-d-z-2pwo9a/assets/r1oyq8g05psy/PenaltyDZ.jpeg" alt="PenaltyDz Logo" class="w-10 h-10 rounded-full mr-3">
+          <img 
+            src="https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/penalty-d-z-2pwo9a/assets/r1oyq8g05psy/PenaltyDZ.jpeg" 
+            alt="PenaltyDz Logo" 
+            class="w-10 h-10 rounded-full mr-3"
+            loading="eager"
+          >
           <h1 class="text-2xl font-bold text-primary-dark">PenaltyDz</h1>
         </div>
 
         <div class="hidden md:flex space-x-8">
-          <a href="#features" class="text-primary-medium hover:text-primary-dark transition-colors" data-key="features">Fonctionnalités</a>
-          <a href="#download" class="text-primary-medium hover:text-primary-dark transition-colors" data-key="download">Télécharger</a>
+          <a href="#screenshots" class="text-primary-medium hover:text-primary-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary-dark focus:ring-opacity-50 rounded px-2 py-1" data-key="screenshots">Captures d'écran</a>
+          <a href="#features" class="text-primary-medium hover:text-primary-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary-dark focus:ring-opacity-50 rounded px-2 py-1" data-key="features">Fonctionnalités</a>
+          <a href="#download" class="text-primary-medium hover:text-primary-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary-dark focus:ring-opacity-50 rounded px-2 py-1" data-key="download">Télécharger</a>
         </div>
 
         <div class="flex space-x-3 items-center">
-          <button class="lang-btn active" data-lang="fr">🇫🇷</button>
-          <button class="lang-btn" data-lang="en">🇬🇧</button>
-          <button class="lang-btn" data-lang="ar">🇩🇿</button>
+          <button class="lang-btn active" data-lang="fr" aria-label="Français">🇫🇷</button>
+          <button class="lang-btn" data-lang="en" aria-label="English">🇬🇧</button>
+          <button class="lang-btn" data-lang="ar" aria-label="العربية">🇩🇿</button>
         </div>
       </div>
     </nav>
@@ -121,16 +275,50 @@
         <p class="text-xl mb-8 text-gray-100" data-key="heroDesc">
           Trouvez des équipes adversaires, recrutez des joueurs et organisez des matchs passionnants avec PenaltyDz.
         </p>
-        <button class="download-btn bg-accent-orange text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:bg-opacity-90" data-key="downloadApp">
+        <button class="download-btn bg-accent-orange text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:bg-opacity-90 flex items-center pulse-animation" data-key="downloadApp">
+          <span class="loading-spinner"></span>
           📱 Télécharger sur Android
         </button>
+        <p class="mt-4 text-sm text-gray-200">Gratuit • Aucune inscription requise</p>
       </div>
 
       <div class="flex justify-center fade-up" style="animation-delay: 0.6s;">
-        <div class="w-80 h-96 bg-white rounded-3xl shadow-2xl p-6 transform rotate-3 flex items-center justify-center">
-          <img src="https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/penalty-d-z-2pwo9a/assets/5ma3tljrz6oa/App_title_transparent.png"
-               alt="PenaltyDz App"
-               class="w-64 h-auto object-contain animated-logo">
+        <!-- Carrousel de screenshots -->
+        <div class="carousel-container">
+          <div class="carousel-slide active">
+            <img src="https://raw.githubusercontent.com/DjaberDKH/penaltydz.github.io/a72c60a71253a07188678e3a28adf31d361223ab/2.jpg" alt="Écran d'accueil PenaltyDz" class="w-80 h-auto">
+          </div>
+          <div class="carousel-slide">
+            <img src="https://raw.githubusercontent.com/DjaberDKH/penaltydz.github.io/a72c60a71253a07188678e3a28adf31d361223ab/1.jpg" alt="Écran de connexion PenaltyDz" class="w-80 h-auto">
+          </div>
+          <div class="carousel-slide">
+            <img src="https://raw.githubusercontent.com/DjaberDKH/penaltydz.github.io/a72c60a71253a07188678e3a28adf31d361223ab/3.jpg" alt="Espace personnel PenaltyDz" class="w-80 h-auto">
+          </div>
+          <div class="carousel-slide">
+            <img src="https://raw.githubusercontent.com/DjaberDKH/penaltydz.github.io/a72c60a71253a07188678e3a28adf31d361223ab/4.jpg" alt="Gestion des participations" class="w-80 h-auto">
+          </div>
+          <div class="carousel-slide">
+            <img src="https://raw.githubusercontent.com/DjaberDKH/penaltydz.github.io/a72c60a71253a07188678e3a28adf31d361223ab/5.jpg" alt="Profil utilisateur" class="w-80 h-auto">
+          </div>
+          <div class="carousel-slide">
+            <img src="https://raw.githubusercontent.com/DjaberDKH/penaltydz.github.io/a72c60a71253a07188678e3a28adf31d361223ab/6.jpg" alt="Détails du match" class="w-80 h-auto">
+          </div>
+          <div class="carousel-slide">
+            <img src="https://raw.githubusercontent.com/DjaberDKH/penaltydz.github.io/a72c60a71253a07188678e3a28adf31d361223ab/7.jpg" alt="Gestion d'équipe" class="w-80 h-auto">
+          </div>
+          <div class="carousel-slide">
+            <img src="https://raw.githubusercontent.com/DjaberDKH/penaltydz.github.io/a72c60a71253a07188678e3a28adf31d361223ab/8.jpg" alt="Composition d'équipe" class="w-80 h-auto">
+          </div>
+          <div class="carousel-slide">
+            <img src="https://raw.githubusercontent.com/DjaberDKH/penaltydz.github.io/a72c60a71253a07188678e3a28adf31d361223ab/9.jpg" alt="Création de match" class="w-80 h-auto">
+          </div>
+          
+          <button class="carousel-btn prev">‹</button>
+          <button class="carousel-btn next">›</button>
+          
+          <div class="carousel-dots">
+            <!-- Les points seront générés par JavaScript -->
+          </div>
         </div>
       </div>
     </div>
@@ -144,22 +332,65 @@
     </div>
 
     <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-      <div class="feature-card bg-primary-light p-8 rounded-xl text-center">
+      <div class="feature-card bg-primary-light p-8 rounded-xl text-center hover:shadow-lg transition-shadow">
         <div class="w-16 h-16 bg-accent-orange rounded-full flex items-center justify-center mx-auto mb-6"><span class="text-white text-2xl">🏆</span></div>
         <h3 class="text-xl font-bold text-primary-dark mb-4" data-key="feature1Title">Organiser des matchs</h3>
         <p class="text-primary-medium" data-key="feature1Desc">Créez et planifiez vos matchs en quelques clics.</p>
       </div>
 
-      <div class="feature-card bg-primary-light p-8 rounded-xl text-center">
+      <div class="feature-card bg-primary-light p-8 rounded-xl text-center hover:shadow-lg transition-shadow">
         <div class="w-16 h-16 bg-primary-medium rounded-full flex items-center justify-center mx-auto mb-6"><span class="text-white text-2xl">👥</span></div>
         <h3 class="text-xl font-bold text-primary-dark mb-4" data-key="feature2Title">Trouver des équipes</h3>
         <p class="text-primary-medium" data-key="feature2Desc">Découvrez des équipes adversaires près de chez vous.</p>
       </div>
 
-      <div class="feature-card bg-primary-light p-8 rounded-xl text-center">
+      <div class="feature-card bg-primary-light p-8 rounded-xl text-center hover:shadow-lg transition-shadow">
         <div class="w-16 h-16 bg-accent-yellow rounded-full flex items-center justify-center mx-auto mb-6"><span class="text-primary-dark text-2xl">⚽</span></div>
         <h3 class="text-xl font-bold text-primary-dark mb-4" data-key="feature3Title">Recruter des joueurs</h3>
         <p class="text-primary-medium" data-key="feature3Desc">Complétez votre équipe facilement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Témoignages -->
+  <section class="py-20 bg-primary-light slide-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-primary-dark mb-4" data-key="testimonialsTitle">Ce que disent nos utilisateurs</h2>
+      <p class="text-xl text-primary-medium mb-12" data-key="testimonialsDesc">Découvrez comment PenaltyDz révolutionne l'organisation des matchs</p>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-primary-medium rounded-full flex items-center justify-center text-white font-bold mr-4">AK</div>
+            <div>
+              <h4 class="font-bold text-primary-dark">Ahmed K.</h4>
+              <p class="text-sm text-primary-medium">Capitaine d'équipe</p>
+            </div>
+          </div>
+          <p class="text-primary-medium italic" data-key="testimonial1">"Grâce à PenaltyDz, j'organise nos matchs hebdomadaires en 5 minutes. Plus besoin d'appeler tout le monde !"</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-accent-orange rounded-full flex items-center justify-center text-white font-bold mr-4">SM</div>
+            <div>
+              <h4 class="font-bold text-primary-dark">Samir M.</h4>
+              <p class="text-sm text-primary-medium">Joueur occasionnel</p>
+            </div>
+          </div>
+          <p class="text-primary-medium italic" data-key="testimonial2">"Je trouve toujours une équipe pour jouer le week-end. L'application est simple et efficace."</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-primary-dark rounded-full flex items-center justify-center text-white font-bold mr-4">YR</div>
+            <div>
+              <h4 class="font-bold text-primary-dark">Yacine R.</h4>
+              <p class="text-sm text-primary-medium">Organisateur de tournois</p>
+            </div>
+          </div>
+          <p class="text-primary-medium italic" data-key="testimonial3">"PenaltyDz m'a permis de créer un réseau de 20 équipes pour organiser des tournois réguliers."</p>
+        </div>
       </div>
     </div>
   </section>
@@ -169,7 +400,40 @@
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-4xl font-bold text-white mb-6" data-key="downloadTitle">Prêt à organiser votre prochain match ?</h2>
       <p class="text-xl text-gray-100 mb-8" data-key="downloadDesc">Téléchargez PenaltyDz maintenant et rejoignez la communauté !</p>
-      <button class="download-btn bg-accent-orange text-white px-12 py-6 rounded-xl font-bold text-xl shadow-2xl hover:bg-opacity-90 mb-4" data-key="downloadApp">📱 Télécharger sur Google Play</button>
+      <button class="download-btn bg-accent-orange text-white px-12 py-6 rounded-xl font-bold text-xl shadow-2xl hover:bg-opacity-90 mb-4 flex items-center mx-auto pulse-animation" data-key="downloadApp">
+        <span class="loading-spinner"></span>
+        📱 Télécharger sur Google Play
+      </button>
+      <p class="text-gray-200 text-sm">Compatibilité: Android 8.0+ • Taille: ~25MB</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-white slide-section">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-primary-dark mb-12 text-center" data-key="faqTitle">Questions fréquentes</h2>
+      
+      <div class="space-y-6">
+        <div class="bg-primary-light p-6 rounded-xl">
+          <h3 class="text-xl font-bold text-primary-dark mb-2" data-key="faq1Question">L'application est-elle vraiment gratuite ?</h3>
+          <p class="text-primary-medium" data-key="faq1Answer">Oui, PenaltyDz est entièrement gratuit. Aucun abonnement ni achat in-app n'est requis pour utiliser toutes les fonctionnalités.</p>
+        </div>
+        
+        <div class="bg-primary-light p-6 rounded-xl">
+          <h3 class="text-xl font-bold text-primary-dark mb-2" data-key="faq2Question">Dans quelles villes est disponible PenaltyDz ?</h3>
+          <p class="text-primary-medium" data-key="faq2Answer">PenaltyDz est disponible dans toutes les grandes villes d'Algérie et s'étend progressivement à d'autres régions.</p>
+        </div>
+        
+        <div class="bg-primary-light p-6 rounded-xl">
+          <h3 class="text-xl font-bold text-primary-dark mb-2" data-key="faq3Question">Comment créer mon équipe ?</h3>
+          <p class="text-primary-medium" data-key="faq3Answer">Il suffit de créer un compte, de donner un nom à votre équipe et d'ajouter vos joueurs. Vous pouvez ensuite commencer à organiser des matchs.</p>
+        </div>
+        
+        <div class="bg-primary-light p-6 rounded-xl">
+          <h3 class="text-xl font-bold text-primary-dark mb-2" data-key="faq4Question">L'application est-elle disponible sur iOS ?</h3>
+          <p class="text-primary-medium" data-key="faq4Answer">Pour le moment, PenaltyDz est uniquement disponible sur Android. Une version iOS est prévue pour le futur.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -177,12 +441,17 @@
   <footer class="bg-primary-dark text-white py-12 slide-section">
     <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 items-center">
       <div class="flex items-center">
-        <img src="https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/penalty-d-z-2pwo9a/assets/r1oyq8g05psy/PenaltyDZ.jpeg" alt="PenaltyDz Logo" class="w-8 h-8 rounded-full mr-2">
+        <img 
+          src="https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/penalty-d-z-2pwo9a/assets/r1oyq8g05psy/PenaltyDZ.jpeg" 
+          alt="PenaltyDz Logo" 
+          class="w-8 h-8 rounded-full mr-2"
+          loading="lazy"
+        >
         <h3 class="text-xl font-bold">PenaltyDz</h3>
       </div>
       <p class="text-gray-300 text-center" data-key="footerText">L'application qui révolutionne l'organisation de matchs de football amateur en Algérie.</p>
       <div class="flex justify-center">
-        <a href="https://www.facebook.com/profile.php?id=61573741580087" target="_blank" class="w-10 h-10 bg-accent-orange rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
+        <a href="https://www.facebook.com/profile.php?id=61573741580087" target="_blank" class="w-10 h-10 bg-accent-orange rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors focus:outline-none focus:ring-2 focus:ring-white">
           <span class="text-white text-lg">f</span>
         </a>
       </div>
@@ -194,18 +463,188 @@
 
   <script>
     const translations = {
-      fr: { features:"Fonctionnalités",download:"Télécharger",heroTitle:"Organisez vos matchs de football facilement",heroDesc:"Trouvez des équipes adversaires, recrutez des joueurs et organisez des matchs passionnants avec PenaltyDz.",featuresTitle:"Tout ce dont vous avez besoin",featuresDesc:"Des fonctionnalités pensées pour les passionnés de football",feature1Title:"Organiser des matchs",feature1Desc:"Créez et planifiez vos matchs en quelques clics.",feature2Title:"Trouver des équipes",feature2Desc:"Découvrez des équipes adversaires près de chez vous.",feature3Title:"Recruter des joueurs",feature3Desc:"Complétez votre équipe facilement.",downloadTitle:"Prêt à organiser votre prochain match ?",downloadDesc:"Téléchargez PenaltyDz maintenant et rejoignez la communauté !",footerText:"L'application qui révolutionne l'organisation de matchs de football amateur en Algérie.",downloadApp:"📱 Télécharger sur Android"},
-      en: { features:"Features",download:"Download",heroTitle:"Organize your football matches easily",heroDesc:"Find rival teams, recruit players and organize exciting matches with PenaltyDz.",featuresTitle:"Everything you need",featuresDesc:"Features designed for football lovers",feature1Title:"Organize matches",feature1Desc:"Create and schedule your matches in a few clicks.",feature2Title:"Find teams",feature2Desc:"Discover rival teams near you.",feature3Title:"Recruit players",feature3Desc:"Complete your team easily.",downloadTitle:"Ready to organize your next match?",downloadDesc:"Download PenaltyDz now and join the community!",footerText:"The app that revolutionizes amateur football in Algeria.",downloadApp:"📱 Download on Android"},
-      ar: { features:"الميزات",download:"تحميل",heroTitle:"نظّم مباريات كرة القدم بسهولة",heroDesc:"ابحث عن فرق منافسة، وضم لاعبين، ونظّم مباريات ممتعة مع PenaltyDz.",featuresTitle:"كل ما تحتاجه",featuresDesc:"ميزات مصممة لعشاق كرة القدم",feature1Title:"تنظيم المباريات",feature1Desc:"أنشئ وجدول مبارياتك ببضع نقرات.",feature2Title:"البحث عن الفرق",feature2Desc:"اكتشف الفرق المنافسة بالقرب منك.",feature3Title:"تجنيد اللاعبين",feature3Desc:"أكمل فريقك بسهولة.",downloadTitle:"هل أنت مستعد لتنظيم مباراتك القادمة؟",downloadDesc:"قم بتحميل PenaltyDz الآن وانضم إلى المجتمع!",footerText:"التطبيق الذي يغير طريقة تنظيم مباريات كرة القدم في الجزائر.",downloadApp:"📱 تحميل على أندرويد"}
+      fr: { 
+        features:"Fonctionnalités",
+        download:"Télécharger",
+        screenshots:"Captures d'écran",
+        heroTitle:"Organisez vos matchs de football facilement",
+        heroDesc:"Trouvez des équipes adversaires, recrutez des joueurs et organisez des matchs passionnants avec PenaltyDz.",
+        screenshotsTitle:"Découvrez l'application",
+        screenshotsDesc:"Explorez les fonctionnalités de PenaltyDz à travers nos captures d'écran",
+        featuresTitle:"Tout ce dont vous avez besoin",
+        featuresDesc:"Des fonctionnalités pensées pour les passionnés de football",
+        feature1Title:"Organiser des matchs",
+        feature1Desc:"Créez et planifiez vos matchs en quelques clics.",
+        feature2Title:"Trouver des équipes",
+        feature2Desc:"Découvrez des équipes adversaires près de chez vous.",
+        feature3Title:"Recruter des joueurs",
+        feature3Desc:"Complétez votre équipe facilement.",
+        testimonialsTitle:"Ce que disent nos utilisateurs",
+        testimonialsDesc:"Découvrez comment PenaltyDz révolutionne l'organisation des matchs",
+        testimonial1:"\"Grâce à PenaltyDz, j'organise nos matchs hebdomadaires en 5 minutes. Plus besoin d'appeler tout le monde !\"",
+        testimonial2:"\"Je trouve toujours une équipe pour jouer le week-end. L'application est simple et efficace.\"",
+        testimonial3:"\"PenaltyDz m'a permis de créer un réseau de 20 équipes pour organiser des tournois réguliers.\"",
+        downloadTitle:"Prêt à organiser votre prochain match ?",
+        downloadDesc:"Téléchargez PenaltyDz maintenant et rejoignez la communauté !",
+        faqTitle:"Questions fréquentes",
+        faq1Question:"L'application est-elle vraiment gratuite ?",
+        faq1Answer:"Oui, PenaltyDz est entièrement gratuit. Aucun abonnement ni achat in-app n'est requis pour utiliser toutes les fonctionnalités.",
+        faq2Question:"Dans quelles villes est disponible PenaltyDz ?",
+        faq2Answer:"PenaltyDz est disponible dans toutes les grandes villes d'Algérie et s'étend progressivement à d'autres régions.",
+        faq3Question:"Comment créer mon équipe ?",
+        faq3Answer:"Il suffit de créer un compte, de donner un nom à votre équipe et d'ajouter vos joueurs. Vous pouvez ensuite commencer à organiser des matchs.",
+        faq4Question:"L'application est-elle disponible sur iOS ?",
+        faq4Answer:"Pour le moment, PenaltyDz est uniquement disponible sur Android. Une version iOS est prévue pour le futur.",
+        footerText:"L'application qui révolutionne l'organisation de matchs de football amateur en Algérie.",
+        downloadApp:"📱 Télécharger sur Android"
+      },
+      en: { 
+        features:"Features",
+        download:"Download",
+        screenshots:"Screenshots",
+        heroTitle:"Organize your football matches easily",
+        heroDesc:"Find rival teams, recruit players and organize exciting matches with PenaltyDz.",
+        screenshotsTitle:"Discover the app",
+        screenshotsDesc:"Explore PenaltyDz features through our screenshots",
+        featuresTitle:"Everything you need",
+        featuresDesc:"Features designed for football lovers",
+        feature1Title:"Organize matches",
+        feature1Desc:"Create and schedule your matches in a few clicks.",
+        feature2Title:"Find teams",
+        feature2Desc:"Discover rival teams near you.",
+        feature3Title:"Recruit players",
+        feature3Desc:"Complete your team easily.",
+        testimonialsTitle:"What our users say",
+        testimonialsDesc:"Discover how PenaltyDz revolutionizes match organization",
+        testimonial1:"\"Thanks to PenaltyDz, I organize our weekly matches in 5 minutes. No need to call everyone!\"",
+        testimonial2:"\"I always find a team to play on weekends. The app is simple and effective.\"",
+        testimonial3:"\"PenaltyDz allowed me to create a network of 20 teams to organize regular tournaments.\"",
+        downloadTitle:"Ready to organize your next match?",
+        downloadDesc:"Download PenaltyDz now and join the community!",
+        faqTitle:"Frequently Asked Questions",
+        faq1Question:"Is the app really free?",
+        faq1Answer:"Yes, PenaltyDz is completely free. No subscription or in-app purchase is required to use all features.",
+        faq2Question:"In which cities is PenaltyDz available?",
+        faq2Answer:"PenaltyDz is available in all major cities in Algeria and is gradually expanding to other regions.",
+        faq3Question:"How to create my team?",
+        faq3Answer:"Just create an account, give a name to your team and add your players. You can then start organizing matches.",
+        faq4Question:"Is the app available on iOS?",
+        faq4Answer:"For now, PenaltyDz is only available on Android. An iOS version is planned for the future.",
+        footerText:"The app that revolutionizes amateur football match organization in Algeria.",
+        downloadApp:"📱 Download on Android"
+      },
+      ar: { 
+        features:"الميزات",
+        download:"تحميل",
+        screenshots:"لقطات الشاشة",
+        heroTitle:"نظّم مباريات كرة القدم بسهولة",
+        heroDesc:"ابحث عن فرق منافسة، وضم لاعبين، ونظّم مباريات ممتعة مع PenaltyDz.",
+        screenshotsTitle:"اكتشف التطبيق",
+        screenshotsDesc:"استكشف ميزات PenaltyDz من خلال لقطات الشاشة",
+        featuresTitle:"كل ما تحتاجه",
+        featuresDesc:"ميزات مصممة لعشاق كرة القدم",
+        feature1Title:"تنظيم المباريات",
+        feature1Desc:"أنشئ وجدول مبارياتك ببضع نقرات.",
+        feature2Title:"البحث عن الفرق",
+        feature2Desc:"اكتشف الفرق المنافسة بالقرب منك.",
+        feature3Title:"تجنيد اللاعبين",
+        feature3Desc:"أكمل فريقك بسهولة.",
+        testimonialsTitle:"ماذا يقول مستخدمونا",
+        testimonialsDesc:"اكتشف كيف يغير PenaltyDz طريقة تنظيم المباريات",
+        testimonial1:"\"بفضل PenaltyDz، أنظم مبارياتنا الأسبوعية في 5 دقائق. لم يعد هناك حاجة للاتصال بالجميع!\"",
+        testimonial2:"\"دائماً أجد فريقاً للعب في عطلة نهاية الأسبوع. التطبيق بسيط وفعال.\"",
+        testimonial3:"\"سمح لي PenaltyDz بإنشاء شبكة من 20 فريقاً لتنظيم بطولات منتظمة.\"",
+        downloadTitle:"هل أنت مستعد لتنظيم مباراتك القادمة؟",
+        downloadDesc:"قم بتحميل PenaltyDz الآن وانضم إلى المجتمع!",
+        faqTitle:"الأسئلة الشائعة",
+        faq1Question:"هل التطبيق مجاني حقاً؟",
+        faq1Answer:"نعم، PenaltyDz مجاني تماماً. لا يلزم الاشتراك أو الشراء داخل التطبيق لاستخدام جميع الميزات.",
+        faq2Question:"في أي المدن يتوفر PenaltyDz؟",
+        faq2Answer:"يتوفر PenaltyDz في جميع المدن الكبرى في الجزائر ويتوسع تدريجياً إلى مناطق أخرى.",
+        faq3Question:"كيف يمكنني إنشاء فريقي؟",
+        faq3Answer:"ما عليك سوى إنشاء حساب، وإعطاء اسم لفريقك وإضافة لاعبيك. يمكنك بعد ذلك البدء في تنظيم المباريات.",
+        faq4Question:"هل التطبيق متاح على iOS؟",
+        faq4Answer:"في الوقت الحالي، PenaltyDz متاح فقط على Android. من المخطط إصدار نسخة iOS في المستقبل.",
+        footerText:"التطبيق الذي يغير طريقة تنظيم مباريات كرة القدم في الجزائر.",
+        downloadApp:"📱 تحميل على أندرويد"
+      }
     };
+
+    // Gestion du carrousel
+    class Carousel {
+      constructor(container) {
+        this.container = container;
+        this.slides = container.querySelectorAll('.carousel-slide');
+        this.dotsContainer = container.querySelector('.carousel-dots');
+        this.prevBtn = container.querySelector('.carousel-btn.prev');
+        this.nextBtn = container.querySelector('.carousel-btn.next');
+        this.currentIndex = 0;
+        
+        this.init();
+      }
+      
+      init() {
+        // Créer les points
+        this.slides.forEach((_, index) => {
+          const dot = document.createElement('button');
+          dot.className = `carousel-dot ${index === 0 ? 'active' : ''}`;
+          dot.addEventListener('click', () => this.goToSlide(index));
+          this.dotsContainer.appendChild(dot);
+        });
+        
+        // Événements des boutons
+        this.prevBtn.addEventListener('click', () => this.prev());
+        this.nextBtn.addEventListener('click', () => this.next());
+        
+        // Auto-play
+        this.startAutoPlay();
+        
+        // Pause auto-play au survol
+        this.container.addEventListener('mouseenter', () => this.stopAutoPlay());
+        this.container.addEventListener('mouseleave', () => this.startAutoPlay());
+      }
+      
+      goToSlide(index) {
+        this.slides[this.currentIndex].classList.remove('active');
+        this.dotsContainer.children[this.currentIndex].classList.remove('active');
+        
+        this.currentIndex = index;
+        
+        this.slides[this.currentIndex].classList.add('active');
+        this.dotsContainer.children[this.currentIndex].classList.add('active');
+      }
+      
+      next() {
+        const nextIndex = (this.currentIndex + 1) % this.slides.length;
+        this.goToSlide(nextIndex);
+      }
+      
+      prev() {
+        const prevIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
+        this.goToSlide(prevIndex);
+      }
+      
+      startAutoPlay() {
+        this.autoPlayInterval = setInterval(() => this.next(), 4000);
+      }
+      
+      stopAutoPlay() {
+        if (this.autoPlayInterval) {
+          clearInterval(this.autoPlayInterval);
+        }
+      }
+    }
 
     const langButtons = document.querySelectorAll('.lang-btn');
     const elements = document.querySelectorAll('[data-key]');
+    const downloadButtons = document.querySelectorAll('.download-btn');
 
     function setLanguage(lang) {
       elements.forEach(el => {
         const key = el.getAttribute('data-key');
-        el.textContent = translations[lang][key];
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
       });
       document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr';
       langButtons.forEach(b => b.classList.remove('active'));
@@ -220,10 +659,33 @@
 
     langButtons.forEach(btn => btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang'))));
 
+    // Simulation du téléchargement
+    downloadButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const spinner = this.querySelector('.loading-spinner');
+        spinner.style.display = 'inline-block';
+        
+        // Simulation d'un délai de téléchargement
+        setTimeout(() => {
+          spinner.style.display = 'none';
+          alert('Merci pour votre intérêt! L\'application sera bientôt disponible sur le Google Play Store.');
+        }, 1500);
+      });
+    });
+
+    // Animation au défilement
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.2 });
     document.querySelectorAll('.feature-card, .slide-section').forEach(el => observer.observe(el));
+
+    // Initialiser le carrousel
+    document.addEventListener('DOMContentLoaded', () => {
+      const carouselContainer = document.querySelector('.carousel-container');
+      if (carouselContainer) {
+        new Carousel(carouselContainer);
+      }
+    });
   </script>
 </body>
 </html>
