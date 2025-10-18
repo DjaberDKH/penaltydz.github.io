@@ -180,36 +180,6 @@
       box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
     }
     
-    .carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255, 255, 255, 0.8);
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      z-index: 10;
-    }
-    
-    .carousel-btn:hover {
-      background: white;
-      transform: translateY(-50%) scale(1.1);
-    }
-    
-    .carousel-btn.prev {
-      left: -20px;
-    }
-    
-    .carousel-btn.next {
-      right: -20px;
-    }
-    
     .carousel-dots {
       display: flex;
       justify-content: center;
@@ -313,8 +283,7 @@
             <img src="https://raw.githubusercontent.com/DjaberDKH/penaltydz.github.io/a72c60a71253a07188678e3a28adf31d361223ab/1.jpg" alt="Écran de connexion PenaltyDz" class="w-80 h-auto">
           </div>
           
-          <button class="carousel-btn prev">‹</button>
-          <button class="carousel-btn next">›</button>
+          <!-- Suppression des boutons de navigation -->
           
           <div class="carousel-dots">
             <!-- Les points seront générés par JavaScript -->
@@ -568,8 +537,6 @@
         this.container = container;
         this.slides = container.querySelectorAll('.carousel-slide');
         this.dotsContainer = container.querySelector('.carousel-dots');
-        this.prevBtn = container.querySelector('.carousel-btn.prev');
-        this.nextBtn = container.querySelector('.carousel-btn.next');
         this.currentIndex = 0;
         
         this.init();
@@ -583,10 +550,6 @@
           dot.addEventListener('click', () => this.goToSlide(index));
           this.dotsContainer.appendChild(dot);
         });
-        
-        // Événements des boutons
-        this.prevBtn.addEventListener('click', () => this.prev());
-        this.nextBtn.addEventListener('click', () => this.next());
         
         // Auto-play
         this.startAutoPlay();
