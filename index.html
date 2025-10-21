@@ -245,10 +245,12 @@
         <p class="text-xl mb-8 text-gray-100" data-key="heroDesc">
           Trouvez des équipes adversaires, recrutez des joueurs et organisez des matchs passionnants avec PenaltyDz.
         </p>
-        <button class="download-btn bg-accent-orange text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:bg-opacity-90 flex items-center pulse-animation" data-key="downloadApp">
-          <span class="loading-spinner"></span>
-          📝 S'inscrire dans la liste d'attente
-        </button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSds4xvsXPOuec1avTRTSx6b4H_HPdgZGD8OFXGtwqFFvq7YyQ/viewform?usp=dialog" 
+           target="_blank" 
+           class="download-btn bg-accent-orange text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:bg-opacity-90 flex items-center justify-center pulse-animation w-fit"
+           data-key="downloadApp">
+          <!-- Le texte sera rempli par JavaScript -->
+        </a>
         <!-- Suppression de "Gratuit • Aucune inscription requise" -->
       </div>
 
@@ -326,10 +328,12 @@
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-4xl font-bold text-white mb-6" data-key="downloadTitle">Prêt à organiser votre prochain match ?</h2>
       <p class="text-xl text-gray-100 mb-8" data-key="downloadDesc">Rejoignez la liste d'attente pour être parmi les premiers à tester PenaltyDz !</p>
-      <button class="download-btn bg-accent-orange text-white px-12 py-6 rounded-xl font-bold text-xl shadow-2xl hover:bg-opacity-90 mb-4 flex items-center mx-auto pulse-animation" data-key="downloadApp">
-        <span class="loading-spinner"></span>
-        📝 S'inscrire dans la liste d'attente
-      </button>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSds4xvsXPOuec1avTRTSx6b4H_HPdgZGD8OFXGtwqFFvq7YyQ/viewform?usp=dialog" 
+         target="_blank" 
+         class="download-btn bg-accent-orange text-white px-12 py-6 rounded-xl font-bold text-xl shadow-2xl hover:bg-opacity-90 mb-4 flex items-center justify-center mx-auto pulse-animation"
+         data-key="downloadApp">
+        <!-- Le texte sera rempli par JavaScript -->
+      </a>
       <!-- Suppression de "Compatibilité: Android 8.0+ • Taille: ~25MB" -->
     </div>
   </section>
@@ -524,7 +528,6 @@
 
     const langButtons = document.querySelectorAll('.lang-btn');
     const elements = document.querySelectorAll('[data-key]');
-    const downloadButtons = document.querySelectorAll('.download-btn');
 
     function setLanguage(lang) {
       elements.forEach(el => {
@@ -545,20 +548,6 @@
     setLanguage(initialLang);
 
     langButtons.forEach(btn => btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang'))));
-
-    // Redirection vers le formulaire Google
-    downloadButtons.forEach(btn => {
-      btn.addEventListener('click', function() {
-        const spinner = this.querySelector('.loading-spinner');
-        spinner.style.display = 'inline-block';
-        
-        // Redirection après un court délai
-        setTimeout(() => {
-          window.open('https://docs.google.com/forms/d/e/1FAIpQLSds4xvsXPOuec1avTRTSx6b4H_HPdgZGD8OFXGtwqFFvq7YyQ/viewform', '_blank');
-          spinner.style.display = 'none';
-        }, 500);
-      });
-    });
 
     // Animation au défilement
     const observer = new IntersectionObserver(entries => {
