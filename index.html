@@ -223,7 +223,7 @@
         <div class="hidden md:flex space-x-8">
           <!-- Suppression du lien "Captures d'écran" -->
           <a href="#features" class="text-primary-medium hover:text-primary-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary-dark focus:ring-opacity-50 rounded px-2 py-1" data-key="features">Fonctionnalités</a>
-          <a href="#download" class="text-primary-medium hover:text-primary-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary-dark focus:ring-opacity-50 rounded px-2 py-1" data-key="download">Télécharger</a>
+          <a href="#download" class="text-primary-medium hover:text-primary-dark transition-colors focus:outline-none focus:ring-2 focus:ring-primary-dark focus:ring-opacity-50 rounded px-2 py-1" data-key="download">Liste d'attente</a>
         </div>
 
         <div class="flex space-x-3 items-center">
@@ -247,7 +247,7 @@
         </p>
         <button class="download-btn bg-accent-orange text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:bg-opacity-90 flex items-center pulse-animation" data-key="downloadApp">
           <span class="loading-spinner"></span>
-          📱 Télécharger sur Android
+          📝 S'inscrire dans la liste d'attente
         </button>
         <!-- Suppression de "Gratuit • Aucune inscription requise" -->
       </div>
@@ -321,58 +321,14 @@
     </div>
   </section>
 
-  <!-- Témoignages -->
-  <section class="py-20 bg-primary-light slide-section">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl font-bold text-primary-dark mb-4" data-key="testimonialsTitle">Ce que disent nos utilisateurs</h2>
-      <p class="text-xl text-primary-medium mb-12" data-key="testimonialsDesc">Découvrez comment PenaltyDz révolutionne l'organisation des matchs</p>
-      
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-xl shadow-md">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-primary-medium rounded-full flex items-center justify-center text-white font-bold mr-4">AK</div>
-            <div>
-              <h4 class="font-bold text-primary-dark">Ahmed K.</h4>
-              <p class="text-sm text-primary-medium">Capitaine d'équipe</p>
-            </div>
-          </div>
-          <p class="text-primary-medium italic" data-key="testimonial1">"Grâce à PenaltyDz, j'organise nos matchs hebdomadaires en 5 minutes. Plus besoin d'appeler tout le monde !"</p>
-        </div>
-        
-        <div class="bg-white p-6 rounded-xl shadow-md">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-accent-orange rounded-full flex items-center justify-center text-white font-bold mr-4">SM</div>
-            <div>
-              <h4 class="font-bold text-primary-dark">Samir M.</h4>
-              <p class="text-sm text-primary-medium">Joueur occasionnel</p>
-            </div>
-          </div>
-          <p class="text-primary-medium italic" data-key="testimonial2">"Je trouve toujours une équipe pour jouer le week-end. L'application est simple et efficace."</p>
-        </div>
-        
-        <div class="bg-white p-6 rounded-xl shadow-md">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-primary-dark rounded-full flex items-center justify-center text-white font-bold mr-4">YR</div>
-            <div>
-              <h4 class="font-bold text-primary-dark">Yacine R.</h4>
-              <!-- Remplacement de "Organisateur de tournois" par "Organisateur" -->
-              <p class="text-sm text-primary-medium">Organisateur</p>
-            </div>
-          </div>
-          <p class="text-primary-medium italic" data-key="testimonial3">"PenaltyDz m'a permis de créer un réseau de 20 équipes pour organiser des tournois réguliers."</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Download -->
   <section id="download" class="hero-gradient py-20 text-center slide-section">
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-4xl font-bold text-white mb-6" data-key="downloadTitle">Prêt à organiser votre prochain match ?</h2>
-      <p class="text-xl text-gray-100 mb-8" data-key="downloadDesc">Téléchargez PenaltyDz maintenant et rejoignez la communauté !</p>
+      <p class="text-xl text-gray-100 mb-8" data-key="downloadDesc">Rejoignez la liste d'attente pour être parmi les premiers à tester PenaltyDz !</p>
       <button class="download-btn bg-accent-orange text-white px-12 py-6 rounded-xl font-bold text-xl shadow-2xl hover:bg-opacity-90 mb-4 flex items-center mx-auto pulse-animation" data-key="downloadApp">
         <span class="loading-spinner"></span>
-        📱 Télécharger sur Google Play
+        📝 S'inscrire dans la liste d'attente
       </button>
       <!-- Suppression de "Compatibilité: Android 8.0+ • Taille: ~25MB" -->
     </div>
@@ -432,7 +388,7 @@
     const translations = {
       fr: { 
         features:"Fonctionnalités",
-        download:"Télécharger",
+        download:"Liste d'attente",
         heroTitle:"Organisez vos matchs de football facilement",
         heroDesc:"Trouvez des équipes adversaires, recrutez des joueurs et organisez des matchs passionnants avec PenaltyDz.",
         featuresTitle:"Tout ce dont vous avez besoin",
@@ -443,13 +399,8 @@
         feature2Desc:"Découvrez des équipes adversaires près de chez vous.",
         feature3Title:"Recruter des joueurs",
         feature3Desc:"Complétez votre équipe facilement.",
-        testimonialsTitle:"Ce que disent nos utilisateurs",
-        testimonialsDesc:"Découvrez comment PenaltyDz révolutionne l'organisation des matchs",
-        testimonial1:"\"Grâce à PenaltyDz, j'organise nos matchs hebdomadaires en 5 minutes. Plus besoin d'appeler tout le monde !\"",
-        testimonial2:"\"Je trouve toujours une équipe pour jouer le week-end. L'application est simple et efficace.\"",
-        testimonial3:"\"PenaltyDz m'a permis de créer un réseau de 20 équipes pour organiser des tournois réguliers.\"",
         downloadTitle:"Prêt à organiser votre prochain match ?",
-        downloadDesc:"Téléchargez PenaltyDz maintenant et rejoignez la communauté !",
+        downloadDesc:"Rejoignez la liste d'attente pour être parmi les premiers à tester PenaltyDz !",
         faqTitle:"Questions fréquentes",
         faq1Question:"L'application est-elle vraiment gratuite ?",
         faq1Answer:"Oui, PenaltyDz est entièrement gratuit. Aucun abonnement ni achat in-app n'est requis pour utiliser toutes les fonctionnalités.",
@@ -458,11 +409,11 @@
         faq4Question:"L'application est-elle disponible sur iOS ?",
         faq4Answer:"Pour le moment, PenaltyDz est uniquement disponible sur Android. Une version iOS est prévue pour le futur.",
         footerText:"L'application qui révolutionne l'organisation de matchs de football amateur en Algérie.",
-        downloadApp:"📱 Télécharger sur Android"
+        downloadApp:"📝 S'inscrire dans la liste d'attente"
       },
       en: { 
         features:"Features",
-        download:"Download",
+        download:"Waitlist",
         heroTitle:"Organize your football matches easily",
         heroDesc:"Find rival teams, recruit players and organize exciting matches with PenaltyDz.",
         featuresTitle:"Everything you need",
@@ -473,13 +424,8 @@
         feature2Desc:"Discover rival teams near you.",
         feature3Title:"Recruit players",
         feature3Desc:"Complete your team easily.",
-        testimonialsTitle:"What our users say",
-        testimonialsDesc:"Discover how PenaltyDz revolutionizes match organization",
-        testimonial1:"\"Thanks to PenaltyDz, I organize our weekly matches in 5 minutes. No need to call everyone!\"",
-        testimonial2:"\"I always find a team to play on weekends. The app is simple and effective.\"",
-        testimonial3:"\"PenaltyDz allowed me to create a network of 20 teams to organize regular tournaments.\"",
         downloadTitle:"Ready to organize your next match?",
-        downloadDesc:"Download PenaltyDz now and join the community!",
+        downloadDesc:"Join the waitlist to be among the first to test PenaltyDz!",
         faqTitle:"Frequently Asked Questions",
         faq1Question:"Is the app really free?",
         faq1Answer:"Yes, PenaltyDz is completely free. No subscription or in-app purchase is required to use all features.",
@@ -488,11 +434,11 @@
         faq4Question:"Is the app available on iOS?",
         faq4Answer:"For now, PenaltyDz is only available on Android. An iOS version is planned for the future.",
         footerText:"The app that revolutionizes amateur football match organization in Algeria.",
-        downloadApp:"📱 Download on Android"
+        downloadApp:"📝 Join the waitlist"
       },
       ar: { 
         features:"الميزات",
-        download:"تحميل",
+        download:"قائمة الانتظار",
         heroTitle:"نظّم مباريات كرة القدم بسهولة",
         heroDesc:"ابحث عن فرق منافسة، وضم لاعبين، ونظّم مباريات ممتعة مع PenaltyDz.",
         featuresTitle:"كل ما تحتاجه",
@@ -503,13 +449,8 @@
         feature2Desc:"اكتشف الفرق المنافسة بالقرب منك.",
         feature3Title:"تجنيد اللاعبين",
         feature3Desc:"أكمل فريقك بسهولة.",
-        testimonialsTitle:"ماذا يقول مستخدمونا",
-        testimonialsDesc:"اكتشف كيف يغير PenaltyDz طريقة تنظيم المباريات",
-        testimonial1:"\"بفضل PenaltyDz، أنظم مبارياتنا الأسبوعية في 5 دقائق. لم يعد هناك حاجة للاتصال بالجميع!\"",
-        testimonial2:"\"دائماً أجد فريقاً للعب في عطلة نهاية الأسبوع. التطبيق بسيط وفعال.\"",
-        testimonial3:"\"سمح لي PenaltyDz بإنشاء شبكة من 20 فريقاً لتنظيم بطولات منتظمة.\"",
         downloadTitle:"هل أنت مستعد لتنظيم مباراتك القادمة؟",
-        downloadDesc:"قم بتحميل PenaltyDz الآن وانضم إلى المجتمع!",
+        downloadDesc:"انضم إلى قائمة الانتظار لتكون من أوائل من يجربون PenaltyDz!",
         faqTitle:"الأسئلة الشائعة",
         faq1Question:"هل التطبيق مجاني حقاً؟",
         faq1Answer:"نعم، PenaltyDz مجاني تماماً. لا يلزم الاشتراك أو الشراء داخل التطبيق لاستخدام جميع الميزات.",
@@ -518,7 +459,7 @@
         faq4Question:"هل التطبيق متاح على iOS؟",
         faq4Answer:"في الوقت الحالي، PenaltyDz متاح فقط على Android. من المخطط إصدار نسخة iOS في المستقبل.",
         footerText:"التطبيق الذي يغير طريقة تنظيم مباريات كرة القدم في الجزائر.",
-        downloadApp:"📱 تحميل على أندرويد"
+        downloadApp:"📝 الانضمام إلى قائمة الانتظار"
       }
     };
 
@@ -605,17 +546,17 @@
 
     langButtons.forEach(btn => btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang'))));
 
-    // Simulation du téléchargement
+    // Redirection vers le formulaire Google
     downloadButtons.forEach(btn => {
       btn.addEventListener('click', function() {
         const spinner = this.querySelector('.loading-spinner');
         spinner.style.display = 'inline-block';
         
-        // Simulation d'un délai de téléchargement
+        // Redirection après un court délai
         setTimeout(() => {
+          window.open('https://docs.google.com/forms/d/e/1FAIpQLSds4xvsXPOuec1avTRTSx6b4H_HPdgZGD8OFXGtwqFFvq7YyQ/viewform', '_blank');
           spinner.style.display = 'none';
-          alert('Merci pour votre intérêt! L\'application sera bientôt disponible sur le Google Play Store.');
-        }, 1500);
+        }, 500);
       });
     });
 
