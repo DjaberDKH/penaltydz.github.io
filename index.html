@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PenaltyDz - Organisez vos matchs de football en Algérie</title>
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-THCWPZLHS8"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-AB123XYZ45"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -94,7 +94,7 @@
 
     .fade-up {
       opacity: 0;
-      animation: fade-up s ease forwards;
+      animation: fade-up 1s ease forwards;
     }
 
     @keyframes fade-up {
@@ -216,7 +216,7 @@
 </head>
 
 <body class="h-full bg-primary-light font-sans">
-  
+
   <!-- Header -->
   <header class="bg-white shadow-sm fade-up" style="animation-delay: 0.1s;">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -266,10 +266,10 @@
       </div>
 
       <div class="flex justify-center fade-up" style="animation-delay: 0.6s;">
-        <!-- Carrousel de screenshots avec le nouveau lien pour le screenshot 1 -->
+        <!-- Carrousel de screenshots avec nouvelle ordre -->
         <div class="carousel-container">
           <div class="carousel-slide active">
-            <img src="https://drive.google.com/thumbnail?id=1Tsxm1VuyOlpBkoPCHBSnU9q6ZOjycdJY&sz=w1000" alt="Écran d'accueil PenaltyDz" class="w-80 h-auto">
+            <img src="https://raw.githubusercontent.com/DjaberDKH/penaltydz.github.io/a72c60a71253a07188678e3a28adf31d361223ab/2.jpg" alt="Écran d'accueil PenaltyDz" class="w-80 h-auto">
           </div>
           <div class="carousel-slide">
             <img src="https://raw.githubusercontent.com/DjaberDKH/penaltydz.github.io/a72c60a71253a07188678e3a28adf31d361223ab/3.jpg" alt="Espace personnel PenaltyDz" class="w-80 h-auto">
@@ -471,7 +471,7 @@
         faq1Answer:"نعم، PenaltyDz مجاني تماماً. لا يلزم الاشتراك أو الشراء داخل التطبيق لاستخدام جميع الميزات.",
         faq2Question:"في أي المدن يتوفر PenaltyDz؟",
         faq2Answer:"يتوفر PenaltyDz في جميع المدن الكبرى في الجزائر ويتوسع تدريجياً إلى مناطق أخرى.",
-        faq4Question:"هل التطبيق متاح على iOS?",
+        faq4Question:"هل التطبيق متاح على iOS؟",
         faq4Answer:"في الوقت الحالي، PenaltyDz متاح فقط على Android. من المخطط إصدار نسخة iOS في المستقبل.",
         footerText:"التطبيق الذي يغير طريقة تنظيم مباريات كرة القدم في الجزائر.",
         downloadApp:"📝 الانضمام إلى قائمة الانتظار"
@@ -558,7 +558,7 @@
     else if (userLang.startsWith('en')) initialLang = 'en';
     setLanguage(initialLang);
 
-    langButtons.forEach(btn => btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang')));
+    langButtons.forEach(btn => btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang'))));
 
     // Animation au défilement
     const observer = new IntersectionObserver(entries => {
