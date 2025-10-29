@@ -4,7 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PenaltyDz - Organisez vos matchs de football en Algérie</title>
-  
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-AB123XYZ45"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-THCWPZLHS8');
+</script>
+
   <meta name="description" content="PenaltyDz est une application gratuite qui vous permet d'organiser facilement des matchs de football amateurs en Algérie. Trouvez des équipes adverses, recrutez des joueurs.">
   <meta name="keywords" content="PenaltyDz, football, matchs, Algérie, amateur, équipe, sport, organisation matchs, application football">
   <meta name="author" content="PenaltyDz">
@@ -256,40 +266,40 @@
       </div>
 
       <div class="flex justify-center fade-up" style="animation-delay: 0.6s;">
-        <!-- Carrousel de screenshots avec les nouveaux liens Imgur -->
-        <div class="carousel-container">
-          <div class="carousel-slide active">
-            <img src="https://i.imgur.com/ycdpTIh.jpeg" alt="Écran d'accueil PenaltyDz" class="w-80 h-auto">
-          </div>
-          <div class="carousel-slide">
-            <img src="https://i.imgur.com/nA8IySb.jpeg" alt="Espace personnel PenaltyDz" class="w-80 h-auto">
-          </div>
-          <div class="carousel-slide">
-            <img src="https://i.imgur.com/Vm7AVsk.jpeg" alt="Gestion des participations" class="w-80 h-auto">
-          </div>
-          <div class="carousel-slide">
-            <img src="https://i.imgur.com/kwhR6hF.jpeg" alt="Profil utilisateur" class="w-80 h-auto">
-          </div>
-          <div class="carousel-slide">
-            <img src="https://i.imgur.com/2z93nYB.jpeg" alt="Détails du match" class="w-80 h-auto">
-          </div>
-          <div class="carousel-slide">
-            <img src="https://i.imgur.com/rXzRkwB.jpeg" alt="Gestion d'équipe" class="w-80 h-auto">
-          </div>
-          <div class="carousel-slide">
-            <img src="https://i.imgur.com/wSy3rrY.jpeg" alt="Composition d'équipe" class="w-80 h-auto">
-          </div>
-          <div class="carousel-slide">
-            <img src="https://i.imgur.com/2lH0ALc.jpeg" alt="Création de match" class="w-80 h-auto">
-          </div>
-          <div class="carousel-slide">
-            <img src="https://i.imgur.com/Z998JAg.jpeg" alt="Écran de connexion PenaltyDz" class="w-80 h-auto">
-          </div>
-          
-          <!-- Suppression des boutons de navigation -->
-          
-          <div class="carousel-dots">
-            <!-- Les points seront générés par JavaScript -->
+       <!-- Carrousel de screenshots avec nouvelle ordre -->
+<div class="carousel-container">
+  <div class="carousel-slide active">
+    <img src="https://i.imgur.com/ycdpTIh.jpeg" alt="Écran d'accueil PenaltyDz" class="w-80 h-auto">
+  </div>
+  <div class="carousel-slide">
+    <img src="https://i.imgur.com/nA8IySb.jpeg" alt="Espace personnel PenaltyDz" class="w-80 h-auto">
+  </div>
+  <div class="carousel-slide">
+    <img src="https://i.imgur.com/Vm7AVsk.jpeg" alt="Gestion des participations" class="w-80 h-auto">
+  </div>
+  <div class="carousel-slide">
+    <img src="https://i.imgur.com/kwhR6hF.jpeg" alt="Profil utilisateur" class="w-80 h-auto">
+  </div>
+  <div class="carousel-slide">
+    <img src="https://i.imgur.com/2z93nYB.jpeg" alt="Détails du match" class="w-80 h-auto">
+  </div>
+  <div class="carousel-slide">
+    <img src="https://i.imgur.com/rXzRkwB.jpeg" alt="Gestion d'équipe" class="w-80 h-auto">
+  </div>
+  <div class="carousel-slide">
+    <img src="https://i.imgur.com/wSy3rrY.jpeg" alt="Composition d'équipe" class="w-80 h-auto">
+  </div>
+  <div class="carousel-slide">
+    <img src="https://i.imgur.com/2lH0ALc.jpeg" alt="Création de match" class="w-80 h-auto">
+  </div>
+  <div class="carousel-slide">
+    <img src="https://i.imgur.com/Z998JAg.jpeg" alt="Écran de connexion PenaltyDz" class="w-80 h-auto">
+  </div>
+
+  <div class="carousel-dots">
+    <!-- Les points seront générés par JavaScript -->
+  </div>
+</div>
           </div>
         </div>
       </div>
@@ -548,7 +558,7 @@
     else if (userLang.startsWith('en')) initialLang = 'en';
     setLanguage(initialLang);
 
-    langButtons.forEach(btn => btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang')));
+    langButtons.forEach(btn => btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang'))));
 
     // Animation au défilement
     const observer = new IntersectionObserver(entries => {
